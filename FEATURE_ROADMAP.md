@@ -99,3 +99,47 @@ This document proposes practical next steps for the Live Event Streaming fronten
 - AI chat moderation and toxicity filter
 - Auto-generated recap cards after event ends
 
+
+## 7) Advanced Animation Playbook
+
+### 7.1 Homepage / Listing
+- Hero gradient mesh animation (very slow, low opacity)
+- Category chip morph transition (background + icon swap)
+- Staggered card reveal on filter/search updates
+- 3D card tilt on pointer move (subtle 4–6deg cap)
+
+### 7.2 Event Card Micro-interactions
+- Poster image parallax on hover
+- Animated border beam around focused card
+- Live badge pulse synchronized with a tiny glow bloom
+- Like button burst (heart particles + scale spring)
+
+### 7.3 Event Detail + Player
+- Cinematic page transition (fade-through + slide)
+- Theater mode expand/collapse spring animation
+- Floating reactions over video (throttled)
+- Chapter progress bar with smooth scrub preview
+
+### 7.4 Chat Experience
+- Message enter animation (slide-up + fade)
+- New message highlight flash that decays in 1s
+- Typing indicator bubble with dot-wave animation
+- Sticky “jump to latest” chip with bounce-in
+
+### 7.5 Scroll & Navigation
+- Section reveal on viewport enter
+- Sticky navbar shrink on scroll
+- Active nav underline with spring interpolation
+- Smooth anchor scroll with reduced-motion fallback
+
+### 7.6 Performance Guardrails for Animations
+- Prefer transform/opacity animations over layout properties
+- Use `will-change` sparingly for hovered/active elements only
+- Disable heavy effects under `prefers-reduced-motion`
+- Gate expensive visuals on low-power/mobile devices
+
+### 7.7 Suggested Libraries (Optional)
+- Framer Motion for layout/transitions/springs
+- Motion One for lightweight performant keyframes
+- Lenis (optional) for smooth scrolling feel
+
