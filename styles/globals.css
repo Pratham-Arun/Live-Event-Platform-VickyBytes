@@ -31,7 +31,6 @@ body {
   border-radius: 9999px;
 }
 
-
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -41,4 +40,10 @@ body {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+
+::selection {
+  background: #fb7185;
+  color: #020617;
 }

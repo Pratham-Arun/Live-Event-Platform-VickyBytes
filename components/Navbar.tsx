@@ -13,7 +13,7 @@ export default function Navbar() {
             Browse all
           </Link>
           <span className="rounded-full border border-slate-700 bg-slate-900 px-3 py-1 text-sm text-slate-300">
-            Discover • Watch • Chat
+            Discover • Stream • Chat
           </span>
         </div>
       </div>

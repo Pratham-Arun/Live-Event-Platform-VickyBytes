@@ -65,6 +65,7 @@ export default function EventCard({ event }: EventCardProps) {
           </button>
           <Link
             href={`/event/${event.id}`}
+            title={`Open ${event.title}`}
             className={`rounded-lg bg-gradient-to-r ${theme.chip} px-3 py-1.5 text-sm font-medium text-white transition hover:brightness-110`}
           >
             👁 View

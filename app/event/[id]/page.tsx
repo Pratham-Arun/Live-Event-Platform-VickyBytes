@@ -23,7 +23,7 @@ export default function EventPage({ params }: EventPageProps) {
   return (
     <div className="space-y-5">
       <Link href="/" className="inline-flex text-sm text-cyan-300 hover:text-cyan-200">
-        ← Back to events
+        ← Back to all events
       </Link>
 
       <div className="grid gap-5 lg:grid-cols-[2fr_1fr]">

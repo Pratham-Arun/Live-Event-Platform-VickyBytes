@@ -180,3 +180,5 @@ export const events: EventItem[] = [
 
 
 export const totalEvents = events.length;
+
+export const eventCategories: EventCategory[] = ['Trending', 'Music', 'Tech', 'Movies', 'Stand Up'];

@@ -24,7 +24,7 @@ export default function HomePage() {
       <div className="relative overflow-hidden rounded-3xl border border-slate-800 bg-gradient-to-r from-slate-900 via-slate-900 to-slate-800 p-6">
         <div className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full bg-rose-500/20 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-10 left-10 h-36 w-36 rounded-full bg-cyan-500/20 blur-3xl" />
-        <h1 className="text-2xl font-bold md:text-3xl">Live Event Streaming Platform</h1>
+        <h1 className="text-2xl font-bold md:text-3xl">Live Events • Streaming Platform</h1>
         <p className="mt-2 max-w-2xl text-sm text-slate-300 md:text-base">
           BookMyShow × District inspired vibe: bold cards, rich gradients, cinematic dark surfaces, and
           energetic category identities.
