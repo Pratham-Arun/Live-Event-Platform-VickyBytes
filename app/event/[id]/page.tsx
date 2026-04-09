@@ -39,6 +39,7 @@ export default function EventPage({ params }: EventPageProps) {
               ) : null}
             </div>
             <h1 className="text-2xl font-bold">{event.title}</h1>
+            <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-400">Schedule</h2>
             <p className="text-sm text-slate-300">
               {new Date(event.dateTime).toLocaleString(undefined, {
                 dateStyle: 'full',

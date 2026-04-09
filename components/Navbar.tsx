@@ -8,9 +8,14 @@ export default function Navbar() {
           <span className="rounded-md bg-rose-600 px-1.5 py-0.5 text-white">Live</span>{' '}
           <span className="text-slate-200">Event District</span>
         </Link>
-        <span className="rounded-full border border-slate-700 bg-slate-900 px-3 py-1 text-sm text-slate-300">
-          Discover • Watch • Chat
-        </span>
+        <div className="flex items-center gap-3">
+          <Link href="/" className="text-sm text-slate-300 transition hover:text-white">
+            Browse all
+          </Link>
+          <span className="rounded-full border border-slate-700 bg-slate-900 px-3 py-1 text-sm text-slate-300">
+            Discover • Watch • Chat
+          </span>
+        </div>
       </div>
     </header>
   );

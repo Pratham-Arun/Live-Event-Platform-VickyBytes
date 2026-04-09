@@ -51,12 +51,14 @@ export default function EventCard({ event }: EventCardProps) {
           <button
             type="button"
             onClick={() => setLiked((current) => !current)}
+            aria-label={`Like ${event.title}`}
             className="rounded-lg border border-slate-700 px-3 py-1.5 text-sm transition hover:border-pink-400"
           >
             {liked ? '💖 Liked' : '❤️ Like'}
           </button>
           <button
             type="button"
+            aria-label={`Share ${event.title}`}
             className="rounded-lg border border-slate-700 px-3 py-1.5 text-sm transition hover:border-cyan-400"
           >
             🔗 Share

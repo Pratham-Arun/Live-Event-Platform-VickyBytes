@@ -68,6 +68,8 @@ export default function HomePage() {
         </div>
       </div>
 
+      <p className="text-sm text-slate-400">Showing {filteredEvents.length} events</p>
+
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
         {filteredEvents.map((event) => (
           <EventCard key={event.id} event={event} />

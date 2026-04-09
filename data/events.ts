@@ -177,3 +177,6 @@ export const events: EventItem[] = [
     streamUrl: 'https://www.youtube.com/embed/jfKfPfyJRdk'
   }
 ];
+
+
+export const totalEvents = events.length;
