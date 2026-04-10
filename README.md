@@ -75,7 +75,7 @@ Find the visionaries behind the stages.
    ```
 
 4. **Open in browser**
-   Visit [http://localhost:3000](http://localhost:3000) to experience the portal.
+   Visit [https://lep-vb.vercel.app/](https://lep-vb.vercel.app/) to experience the portal.
 
 ---
 
