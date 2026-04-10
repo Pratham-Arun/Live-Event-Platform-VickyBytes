@@ -1,7 +1,7 @@
 'use client';
 
 import { useMemo, Suspense } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, type Variants } from 'framer-motion';
 import { MonitorPlay, Music, Tv2, Flame, Mic2, Search, Loader2 } from 'lucide-react';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import EventCard from '@/components/EventCard';
@@ -17,7 +17,7 @@ const categories: Array<{ id: EventCategory | 'All'; icon: React.ElementType; th
   { id: 'Stand Up', icon: Mic2, themeClass: 'border-amber-500/30 text-amber-300 hover:bg-amber-500/10' }
 ];
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -25,7 +25,7 @@ const containerVariants = {
   }
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 300, damping: 24 } }
 };
