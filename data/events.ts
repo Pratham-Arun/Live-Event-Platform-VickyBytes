@@ -1,5 +1,12 @@
 export type EventCategory = 'Trending' | 'Music' | 'Tech' | 'Movies' | 'Stand Up';
 
+export type Host = {
+  id: string;
+  name: string;
+  avatar: string;
+  bio?: string;
+};
+
 export type EventItem = {
   id: string;
   title: string;
@@ -10,6 +17,40 @@ export type EventItem = {
   streamUrl: string;
   isLive?: boolean;
   viewers?: number;
+  host: Host;
+};
+
+const hosts: Record<string, Host> = {
+  tech_guru: {
+    id: 'tech_guru',
+    name: 'Sarah Chen',
+    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80',
+    bio: 'Tech visionary and AI researcher dedicated to exploring the intersection of ethics and automation.'
+  },
+  indie_soul: {
+    id: 'indie_soul',
+    name: 'Marcus Bell',
+    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80',
+    bio: 'Multi-instrumentalist and producer bringing raw indie vibes to the digital stage.'
+  },
+  comedy_king: {
+    id: 'comedy_king',
+    name: 'Dave Rivers',
+    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80',
+    bio: 'Stand-up veteran with a knack for observational humor and crowd-pleasing roasts.'
+  },
+  film_buff: {
+    id: 'film_buff',
+    name: 'Elena Rodriguez',
+    avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80',
+    bio: 'Award-winning director and cinematic historian specializing in the golden age of movies.'
+  },
+  trend_setter: {
+    id: 'trend_setter',
+    name: 'Jordan Lee',
+    avatar: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=200&q=80',
+    bio: 'Digital culture enthusiast analyzing the forces that shape our viral world.'
+  }
 };
 
 export const events: EventItem[] = [
@@ -22,7 +63,8 @@ export const events: EventItem[] = [
     description: 'Explore the latest breakthroughs in AI, automation, and ethical technology with industry leaders.',
     streamUrl: 'https://www.youtube.com/embed/5qap5aO4i9A',
     isLive: true,
-    viewers: 12450
+    viewers: 12450,
+    host: hosts.tech_guru
   },
   {
     id: '2',
@@ -31,7 +73,8 @@ export const events: EventItem[] = [
     category: 'Music',
     thumbnail: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1200&q=80',
     description: 'A curated live performance featuring top indie artists and exclusive acoustic sessions.',
-    streamUrl: 'https://www.youtube.com/embed/jfKfPfyJRdk'
+    streamUrl: 'https://www.youtube.com/embed/jfKfPfyJRdk',
+    host: hosts.indie_soul
   },
   {
     id: '3',
@@ -42,7 +85,8 @@ export const events: EventItem[] = [
     description: 'Learn how creators are building businesses through communities, products, and content.',
     streamUrl: 'https://www.youtube.com/embed/21X5lGlDOfg',
     isLive: true,
-    viewers: 8900
+    viewers: 8900,
+    host: hosts.trend_setter
   },
   {
     id: '4',
@@ -52,7 +96,8 @@ export const events: EventItem[] = [
     thumbnail: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1200&q=80',
     description: 'Be the first to watch the highly anticipated trailer for the biggest blockbuster of the year.',
     streamUrl: 'https://www.youtube.com/embed/5qap5aO4i9A',
-    isLive: false
+    isLive: false,
+    host: hosts.film_buff
   },
   {
     id: '5',
@@ -63,7 +108,8 @@ export const events: EventItem[] = [
     description: 'Dance to an energetic international DJ line-up with seamless genre transitions.',
     streamUrl: 'https://www.youtube.com/embed/jfKfPfyJRdk',
     isLive: true,
-    viewers: 32050
+    viewers: 32050,
+    host: hosts.indie_soul
   },
   {
     id: '6',
@@ -72,7 +118,8 @@ export const events: EventItem[] = [
     category: 'Stand Up',
     thumbnail: 'https://images.unsplash.com/photo-1585699324551-f6c309eedeca?auto=format&fit=crop&w=1200&q=80',
     description: 'Get ready for non-stop laughs with a fantastic lineup of touring stand-up comedians.',
-    streamUrl: 'https://www.youtube.com/embed/21X5lGlDOfg'
+    streamUrl: 'https://www.youtube.com/embed/21X5lGlDOfg',
+    host: hosts.comedy_king
   },
   {
     id: '7',
@@ -81,7 +128,8 @@ export const events: EventItem[] = [
     category: 'Trending',
     thumbnail: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80',
     description: 'A panel discussion analyzing the social and cultural impact of this month’s viral trends.',
-    streamUrl: 'https://www.youtube.com/embed/5qap5aO4i9A'
+    streamUrl: 'https://www.youtube.com/embed/5qap5aO4i9A',
+    host: hosts.trend_setter
   },
   {
     id: '8',
@@ -90,7 +138,8 @@ export const events: EventItem[] = [
     category: 'Music',
     thumbnail: 'https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?auto=format&fit=crop&w=1200&q=80',
     description: 'A nostalgic synthwave livestream featuring neon visuals and retro-inspired live sets.',
-    streamUrl: 'https://www.youtube.com/embed/jfKfPfyJRdk'
+    streamUrl: 'https://www.youtube.com/embed/jfKfPfyJRdk',
+    host: hosts.indie_soul
   },
   {
     id: '9',
@@ -101,7 +150,8 @@ export const events: EventItem[] = [
     description: 'Join award-winning directors as they dissect the greatest scenes in classic cinema.',
     streamUrl: 'https://www.youtube.com/embed/21X5lGlDOfg',
     isLive: true,
-    viewers: 4500
+    viewers: 4500,
+    host: hosts.film_buff
   },
   {
     id: '10',
@@ -110,7 +160,8 @@ export const events: EventItem[] = [
     category: 'Tech',
     thumbnail: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80',
     description: 'Deep-dive sessions on container orchestration, observability, and platform engineering.',
-    streamUrl: 'https://www.youtube.com/embed/5qap5aO4i9A'
+    streamUrl: 'https://www.youtube.com/embed/5qap5aO4i9A',
+    host: hosts.tech_guru
   },
   {
     id: '11',
@@ -121,7 +172,8 @@ export const events: EventItem[] = [
     description: 'An aggressive, no-holds-barred comedy roast session featuring brutal takedowns.',
     streamUrl: 'https://www.youtube.com/embed/jfKfPfyJRdk',
     isLive: true,
-    viewers: 21500
+    viewers: 21500,
+    host: hosts.comedy_king
   },
   {
     id: '12',
@@ -130,7 +182,8 @@ export const events: EventItem[] = [
     category: 'Trending',
     thumbnail: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80',
     description: 'Get advice from hiring managers and engineers on breaking into and growing in tech.',
-    streamUrl: 'https://www.youtube.com/embed/21X5lGlDOfg'
+    streamUrl: 'https://www.youtube.com/embed/21X5lGlDOfg',
+    host: hosts.trend_setter
   },
   {
     id: '13',
@@ -139,7 +192,8 @@ export const events: EventItem[] = [
     category: 'Movies',
     thumbnail: 'https://images.unsplash.com/photo-1440404653325-ab127d49abc1?auto=format&fit=crop&w=1200&q=80',
     description: 'Live interviews with upcoming indie filmmakers before the main festival screening.',
-    streamUrl: 'https://www.youtube.com/embed/5qap5aO4i9A'
+    streamUrl: 'https://www.youtube.com/embed/5qap5aO4i9A',
+    host: hosts.film_buff
   },
   {
     id: '14',
@@ -150,7 +204,8 @@ export const events: EventItem[] = [
     description: 'Watch maintainers unveil new open-source tools and roadmap announcements in real time.',
     streamUrl: 'https://www.youtube.com/embed/21X5lGlDOfg',
     isLive: true,
-    viewers: 9400
+    viewers: 9400,
+    host: hosts.tech_guru
   },
   {
     id: '15',
@@ -159,6 +214,8 @@ export const events: EventItem[] = [
     category: 'Stand Up',
     thumbnail: 'https://images.unsplash.com/photo-1585699324551-f6c309eedeca?auto=format&fit=crop&w=1200&q=80',
     description: 'Two teams of improvisers battle it out using prompts submitted live by the audience.',
-    streamUrl: 'https://www.youtube.com/embed/jfKfPfyJRdk'
+    streamUrl: 'https://www.youtube.com/embed/jfKfPfyJRdk',
+    host: hosts.comedy_king
   }
 ];
+
