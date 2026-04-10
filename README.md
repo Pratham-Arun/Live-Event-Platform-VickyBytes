@@ -75,7 +75,7 @@ Find the visionaries behind the stages.
    ```
 
 4. **Open in browser**
-   Visit [Live Events - VickyBytes/](https://lep-vb.vercel.app/) to experience the portal.
+   Visit [Live Events - VickyBytes](https://lep-vb.vercel.app/) to experience the portal.
 
 ---
 
