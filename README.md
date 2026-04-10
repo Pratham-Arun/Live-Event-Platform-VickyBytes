@@ -1,7 +1,5 @@
 # 🌠 Live Event Platform: Cinematic Edition
 
-![Header Image](https://images.unsplash.com/photo-1540039155733-5bb30b5333f3?auto=format&fit=crop&q=80&w=1200)
-
 > A premium, personalized entertainment portal designed for the next generation of live digital experiences.
 
 ## ✨ The Vision
